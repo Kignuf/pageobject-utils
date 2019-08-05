@@ -1,0 +1,32 @@
+{
+  "name": "pageobject-utils",
+  "version": "1.0.0",
+  "description": "A utility package for 2e2 tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "wdio",
+    "webdriver",
+    "webdriverio",
+    "webdriverio.io",
+    "e2e",
+    "pageobject",
+    "appium",
+    "selenium"
+  ],
+  "author": "Kevin Roulleau",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/lodash": "^4.14.136",
+    "@types/node": "^12.6.8",
+    "@wdio/sync": "^5.11.0",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3",
+    "webdriver": "^5.11.5"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
+}
