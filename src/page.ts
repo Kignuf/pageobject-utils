@@ -1,14 +1,32 @@
 import BaseComponent, { ISelectorCollection } from "./base-component";
-import getElement from "./utils/getelement";
+import Selector from "./selector";
+import Widget from "./widget";
 
-export default abstract class Page<T extends ISelectorCollection> extends BaseComponent<T> {
+export default abstract class Page<T extends ISelectorCollection, U extends Widget<any>> extends BaseComponent<T> {
 
-	constructor(selectors: T) {
+	constructor(
+		selectors: T,
+		private readonly widget?: new (containerElement: WebdriverIO.Element, ...args: any[]) => U,
+		private readonly items?: Selector) {
 		super(selectors);
 	}
 
-	public getElement(selectorKey: keyof T): WebdriverIO.Element {
-		return getElement(this.selectors[selectorKey]);
+	private getItems(): WebdriverIO.Element[] {
+		if (!this.items) {
+			throw new Error(`"items" selector does not exist`);
+		}
+
+		return this.$$(this.items.value);
+	}
+
+	private getWidgets(): U[] {
+		return this.getItems()
+			.map(item => {
+				if (!this.widget) {
+					throw new Error(`"widget" property does not exist`);
+				}
+				return new this.widget(item);
+			});
 	}
 
 	// private searchWidget() {

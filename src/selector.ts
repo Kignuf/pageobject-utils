@@ -1,7 +1,6 @@
 export interface ISelectorOptions {
 	isMandatory?: boolean;
 }
-
 export type SelectorFn = () => void;
 export type FindElementParam = string | SelectorFn;
 
