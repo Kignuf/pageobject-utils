@@ -1,7 +1,7 @@
-import BaseComponent, { ISelectorCollection } from "./base-component";
+import BaseComponent, { SelectorCollection } from "./base-component";
 import Selector from "./selector";
 
-export interface IWidgetSelectorCollection extends ISelectorCollection {
+export interface IWidgetSelectorCollection extends SelectorCollection {
 	mainText: Selector;
 }
 

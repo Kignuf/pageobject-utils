@@ -1,11 +1,9 @@
 import { get } from "lodash";
 import Selector, { FindElementParam } from "./selector";
 
-export interface ISelectorCollection {
-	[key: string]: Selector;
-}
+export type SelectorCollection = Record<string, Selector>;
 
-export default abstract class BaseComponent<T extends ISelectorCollection> {
+export default abstract class BaseComponent<T extends SelectorCollection> {
 	protected selectors: T;
 	protected rootElement?: WebdriverIO.Element | null;
 

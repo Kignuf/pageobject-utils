@@ -1,9 +1,9 @@
-import BaseComponent, { ISelectorCollection } from "./base-component";
+import BaseComponent, { SelectorCollection } from "./base-component";
 import Selector from "./selector";
 import Widget from "./widget";
 
 export default abstract class Page
-	<T extends ISelectorCollection,
+	<T extends SelectorCollection,
 	U extends Widget<any> | null>
 	extends BaseComponent<T> {
 
