@@ -11,7 +11,7 @@
     "wdio",
     "webdriver",
     "webdriverio",
-    "webdriverio.io",
+    "webdriver.io",
     "e2e",
     "pageobject",
     "appium",
@@ -20,12 +20,13 @@
   "author": "Kevin Roulleau",
   "license": "MIT",
   "devDependencies": {
-    "@types/lodash": "^4.14.136",
-    "@types/node": "^12.6.8",
-    "@wdio/sync": "^5.11.0",
-    "tslint": "^5.18.0",
-    "typescript": "^3.5.3",
-    "webdriver": "^5.11.5"
+    "@types/cucumber": "^4.0.7",
+    "@types/lodash": "^4.14.144",
+    "@types/node": "^12.11.5",
+    "@wdio/sync": "^5.15.1",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.4",
+    "webdriver": "^5.15.1"
   },
   "dependencies": {
     "lodash": "^4.17.15"
