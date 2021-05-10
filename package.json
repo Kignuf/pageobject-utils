@@ -27,6 +27,6 @@
     "webdriver": "^5.11.5"
   },
   "dependencies": {
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.21"
   }
 }
